@@ -4,11 +4,12 @@ const generateCards = (num) => {
 
     let arr = []
 
-    for (let i = 0; i < num; i++) {
+    for (let i = 0; i <= num; i++) {
         let formatted = i.toLocaleString('en-US', {
             minimumIntegerDigits: 4,
             useGrouping: false
           })
+        
         arr.push(formatted);  
     }
 
@@ -20,7 +21,7 @@ const loadEvent  = function() {
     console.log('az oldal betoltodott')
 
     const root = document.getElementById("root")
-    const list = generateCards(22)
+    const list = generateCards(200)
 
     for (const item of list) {
     root.insertAdjacentHTML("beforeend", `<div> ${item} </div>`);
