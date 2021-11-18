@@ -22,6 +22,24 @@ const generateArray = function(amount) {
     return returnArray    
 }
 
+const generateCards = (num) => {
+    num = parseInt(num)
+
+
+    let arr = []
+
+    for (let i = 0; i < num; i++) {
+        let formatted = i.toLocaleString('en-US', {
+            minimumIntegerDigits: 4,
+            useGrouping: false
+          })
+        arr.push(formatted);  
+    }
+
+    return arr
+
+}
+
 const loadEvent  = function() {
     console.log('az oldal betoltodott')
 /* 
@@ -29,14 +47,21 @@ const loadEvent  = function() {
     console.log(generateArray(15))
     console.log(generateArray("kutya"))
     console.log(generateArray([2]))
-*/
     const root = document.getElementById("root")
     const list = generateArray(4)
-
+    
     if (list[0] !== "error") {
         for (const item of list) {
             root.insertAdjacentHTML("beforeend", `<div> ${item} </div>`);
         }
+    }
+ */
+
+    const root = document.getElementById("root")
+    const list = generateCards(22)
+
+    for (const item of list) {
+    root.insertAdjacentHTML("beforeend", `<div> ${item} </div>`);
     }
 }
 window.addEventListener("load", loadEvent)
@@ -51,8 +76,9 @@ window.addEventListener("load", loadEvent)
 
 /* 
 
-todo: hf uj function ahanyat generálunk ugy irja ki a szamokat pl 200 -> 001 002 003 ... 200
+ToDo: hf uj function ahanyat generálunk ugy irja ki a szamokat pl 200 -> 001 002 003 ... 200
 
-todo: css a szamok kartya formamban jelenjenek meg
+Todo: css a szamok kartya formamban jelenjenek meg
 
 */
+
