@@ -1,12 +1,10 @@
 const generateCards = (num) => {
     num = parseInt(num)
-
-
     let arr = []
 
     for (let i = 0; i <= num; i++) {
         let formatted = i.toLocaleString('en-US', {
-            minimumIntegerDigits: 4,
+            minimumIntegerDigits: num.toString().length,
             useGrouping: false
           })
         
