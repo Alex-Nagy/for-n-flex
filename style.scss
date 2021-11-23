@@ -1,0 +1,26 @@
+#root {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    /* flex-direction: column ; */
+    justify-content: center;
+    align-items: center;
+}
+
+#root div {
+    margin: 1rem;
+    padding: 1rem;
+    border: rgb(245, 177, 76) solid 3px;
+    border-radius: 10%;
+    background-color: rgb(39, 52, 223);
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    box-shadow: gray 7px 7px 7px;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+#root div:hover{
+    transform: rotate(1turn) scale(1.3)  ;
+}
